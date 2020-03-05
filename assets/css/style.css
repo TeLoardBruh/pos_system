@@ -1,0 +1,19 @@
+.img-coffee{
+    width: 35% !important;
+}
+.cBody{
+    width: 50 !important;
+}
+.card{ 
+    max-width: 16rem!important;
+}
+.logo{
+    margin-left: 160px!important; 
+}
+.catergory{
+    padding-left: 31px!important;
+    padding-right: 57px!important; 
+}
+.show-cart li {
+    display: flex;
+  }
