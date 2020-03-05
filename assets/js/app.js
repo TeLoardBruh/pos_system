@@ -147,7 +147,6 @@ $('.add-to-cart').click(function(event) {
   shoppingCart.addItemToCart(name, price, 1);
   displayCart();
 });
-
 // Clear items
 $('.clear-cart').click(function() {
   shoppingCart.clearCart();
@@ -189,16 +188,7 @@ function displayCart() {
   $('.total-cart').html(shoppingCart.totalCart());
   $('.total-count').html(shoppingCart.totalCount());
 }
-// "<tr>"
-// + "<td scope='col'>" + cartArray[i].name + "</td>" 
-// + "<td scope='col'>" + cartArray[i].price + "</td>"
-// + "<td scope='col'><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>"
-// + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
-// + "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>"
-// + "<td scope='col'><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
-// + " = " 
-// + "<td scope='col'>" + cartArray[i].total + "</td>" 
-// +  "</tr>"
+
 // Delete item button
 
 $('.show-cart').on("click", ".delete-item", function(event) {

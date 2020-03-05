@@ -17,7 +17,16 @@
 .show-cart li {
     display: flex;
 }
+.list-group{
+    flex-direction: row !important;
+}
 
+.list-group-item-action:hover{
+    background-color: #f5df1a !important;
+}
+.list-group-item-action::after{
+    background-color: #e06716 !important;
+}
 /* user css */
 
 /* .tableCenterContent {
