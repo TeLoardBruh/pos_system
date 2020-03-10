@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+       
+    <meta charset="utf-8" />
+        <title>Invoice : </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/invoice.css">
+</head>
+
+<body>
+
+            <div class="container" id="print-invoice" >
+            <a class="no-print" href="javascript:printDiv('print-invoice');">Print</a>
+            <div class="row justify-content-center">
+                <img src="assets/menupic/logo k3ney.png" class="img-fluid" width= "300px" alt="Responsive image">
+
+            </div>
+    
+            <table class="table">
+                <thead>
+                    <tr>
+                                            <td colspan="4" style="border: solid 1px #ddd;">
+                                                    <p style="font-size:14px;margin:0 0 6px 0;"><span
+                                    style="font-weight:bold;display:inline-block;min-width:150px">Address No : </span><b
+                                    style="font-weight:normal;margin:0">Phsar Kandal Ti Pir Phnom Penh, 12206</b></p>
+                                                    <p style="font-size:14px;margin:0 0 6px 0;"><span
+                                    style="font-weight:bold;display:inline-block;min-width:146px">Tel : </span>
+                                    098 774 545
+                                </p>
+                                                    <p style="font-size:14px;margin:0 0 0 0;"><span
+                                    style="font-weight:bold;display:inline-block;min-width:146px">User : </span> Admin</p>
+                                                            <p style="font-size:14px;margin:0 0 0 0;"><span
+                                        style="font-weight:bold;display:inline-block;min-width:146px">Invoice : </span> #Code from backend</p>
+                                                                <p style="font-size:14px;margin:0 0 0 0;">Date :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                            style="display:inline-block;min-width:146px" id="dataInvoice"></span></p>
+                                                </td>
+                            
+                                        </tr>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Quality</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                </thead>
+                <tbody class="tableCenterContent" style="border: solid 1px #ddd;">
+    
+                </tbody>
+            </table>
+            <hr>
+            
+            <div class="mr-10" style="font-size: 20px;"><b>Total price: $<span class="total-cart"></span></b></div>
+            <textarea id="printing-css" style="display:none;">html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}body{font:normal normal .8125em/1.4 Arial,Sans-Serif;background-color:white;color:#333}strong,b{font-weight:bold}cite,em,i{font-style:italic}a{text-decoration:none}a:hover{text-decoration:underline}a img{border:none}abbr,acronym{border-bottom:1px dotted;cursor:help}sup,sub{vertical-align:baseline;position:relative;top:-.4em;font-size:86%}sub{top:.4em}small{font-size:86%}kbd{font-size:80%;border:1px solid #999;padding:2px 5px;border-bottom-width:2px;border-radius:3px}mark{background-color:#ffce00;color:black}p,blockquote,pre,table,figure,hr,form,ol,ul,dl{margin:1.5em 0}hr{height:1px;border:none;background-color:#666}h1,h2,h3,h4,h5,h6{font-weight:bold;line-height:normal;margin:1.5em 0 0}h1{font-size:200%}h2{font-size:180%}h3{font-size:160%}h4{font-size:140%}h5{font-size:120%}h6{font-size:100%}ol,ul,dl{margin-left:3em}ol{list-style:decimal outside}ul{list-style:disc outside}li{margin:.5em 0}dt{font-weight:bold}dd{margin:0 0 .5em 2em}input,button,select,textarea{font:inherit;font-size:100%;line-height:normal;vertical-align:baseline}textarea{display:block;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}pre,code{font-family:"Courier New",Courier,Monospace;color:inherit}pre{white-space:pre;word-wrap:normal;overflow:auto}blockquote{margin-left:2em;margin-right:2em;border-left:4px solid #ccc;padding-left:1em;font-style:italic}table[border="1"] th,table[border="1"] td,table[border="1"] caption{border:1px solid;padding:.5em 1em;text-align:left;vertical-align:top}th{font-weight:bold}table[border="1"] caption{border:none;font-style:italic}.no-print{display:none}</textarea>
+    <iframe id="printing-frame" name="print_frame" src="about:blank" style="display:none;"></iframe>
+    
+        </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/invoice.js"></script>
+</body>
+
+</html>

@@ -21,3 +21,15 @@ dummy data
 (user_interface)
 
 Nothing much u can make desgin on it for me its already acceptable
+
+
+(invoice)
+
+#dataInvoice is the date element
+
+getTime() is the function take Date and time 
+
+
+printDiv is the print recipe function 
+
+printing-css is for js to catch and print it out
